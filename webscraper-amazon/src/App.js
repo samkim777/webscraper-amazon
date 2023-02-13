@@ -44,7 +44,7 @@ function fetchData() {
 
 
 function getData() {
-   axios.get('http://localhost:3001/',{params: {
+   axios.post('https://amazon-webscraper.herokuapp.com',{params: {
       data: input // GET request with user value
     }},{crossdomain:true}) 
     .then(res => {console.log(res);
@@ -52,8 +52,6 @@ function getData() {
                  }).then(() => {
                   fetchData();}) 
 }
-
-
 
 
   useEffect(() => {
