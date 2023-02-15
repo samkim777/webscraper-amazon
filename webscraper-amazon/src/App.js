@@ -44,14 +44,14 @@ function fetchData() {
 
 
 function getData() {
-   axios.post('https://webscraper-amazon.onrender.com', {data: input} // GET request with user value
-  ,) 
+   axios.post('https://webscraper-amazon.onrender.com', 
+   {params: { data: input } // GET request with user value
+  },{crossdomain:true}) 
     .then(res => {console.log(res);
                   setProduct(res.data);
                  }).then(() => {
                   fetchData();}) 
 }
-
 
   useEffect(() => {
 
