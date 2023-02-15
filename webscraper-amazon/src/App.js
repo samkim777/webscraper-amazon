@@ -44,7 +44,7 @@ function fetchData() {
 
 
 function getData() {
-   axios.post('https://webscraper-amazon.herokuapp.com/', {data: input} // GET request with user value
+   axios.post('https://webscraper-amazon.onrender.com', {data: input} // GET request with user value
   ,) 
     .then(res => {console.log(res);
                   setProduct(res.data);
