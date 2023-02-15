@@ -44,7 +44,7 @@ function fetchData() {
 
 
 function getData() {
-   axios.get('https://webscraper-amazon.onrender.com/', 
+   axios.post('https://webscraper-amazon.onrender.com/', 
    {params: { data: input } // GET request with user value
   },{crossdomain:true}) 
     .then(res => {console.log(res);
