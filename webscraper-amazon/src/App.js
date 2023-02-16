@@ -4,8 +4,8 @@ import axios from "axios";
 import "./App.css";
 
 
-
 function App() {
+  const request = require('request');
   
 
   const [product, setProduct] = useState([]);
@@ -44,7 +44,7 @@ function fetchData() {
 
 
 function getData() {
-   axios.post('https://webscraper-amazon.onrender.com/', 
+   axios.post(request({url: 'https://samkim777.github.io/webscraper-amazon/'}), 
    {params: { data: input } // GET request with user value
   },{crossdomain:true}) 
     .then(res => {console.log(res);
